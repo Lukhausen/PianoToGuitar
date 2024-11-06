@@ -161,23 +161,10 @@ The `.terserrc` file contains configurations for [Terser](https://github.com/ter
 
 The `.parcelrc` file configures [Parcel](https://parceljs.org/), a web application bundler. This file includes the setup for various plugins used in the project, such as the JavaScript obfuscator plugin.
 
-### javascript-obfuscator.config.json
-
-The `javascript-obfuscator.config.json` file contains settings for the [JavaScript Obfuscator](https://github.com/javascript-obfuscator/javascript-obfuscator). These settings help obfuscate the JavaScript code to make it more difficult to understand and reverse-engineer. For more information on the available settings, refer to the [JavaScript Obfuscator README](https://github.com/javascript-obfuscator/javascript-obfuscator?tab=readme-ov-file#preset-options).
-
-When adding new Chords, make sure that the names of the chords are included in the `javascript-obfuscator.config.json` reservedNames. Otherwise, they will be obfuscated.
-
 ### package.json
 
 The `package.json` file is essential for Node.js projects. It includes metadata about the project and lists the dependencies. In this project, there is a `staticFiles` section that defines the static audio files to be bundled by the Parcel plugin `parcel-reporter-static-files-copy`. For more details, check the [parcel-reporter-static-files-copy documentation](https://www.npmjs.com/package/parcel-reporter-static-files-copy).
 
 ## Parcel Plugins Used
 
-- **[@rbf/parcel-optimizer-javascript-obfuscator](https://www.npmjs.com/package/@rbf/parcel-optimizer-javascript-obfuscator)**: This plugin is used for obfuscating JavaScript code during the build process.
 - **[parcel-reporter-static-files-copy](https://www.npmjs.com/package/parcel-reporter-static-files-copy)**: This plugin copies static files into the build directory, ensuring that necessary assets like audio files are included in the final build.
-
----
-
-## License
-
-This project is proprietary and confidential; all rights are reserved, and no use, modification, distribution, or access is permitted without explicit written permission from the owner.
